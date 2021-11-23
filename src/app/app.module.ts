@@ -1,16 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { EventsAppComponent } from './events-app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    EventsAppComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  /// its here we tell Angular which component is the main top-level app component.
+  bootstrap: [EventsAppComponent]
 })
 export class AppModule { }

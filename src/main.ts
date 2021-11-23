@@ -8,5 +8,7 @@ if (environment.production) {
   enableProdMode();
 }
 
+
+//// Here we are bootstrapping our application with the AppModule. So when the application first loads this app module is loaded.
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
