@@ -19,7 +19,5 @@ export class EventListComponent {
     },
   };
 
-  handleEventClicked(event: Event) {
-    console.log(event);
-  }
+  
 }
