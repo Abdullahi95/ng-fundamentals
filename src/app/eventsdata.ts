@@ -84,11 +84,7 @@ export let events = [
     time: '9:00 am',
     price: 950.0,
     imageUrl: '/assets/images/ng-nl.png',
-    location: {
-      address: 'The NG-NL Convention Center & Scuba Shop',
-      city: 'Amsterdam',
-      country: 'Netherlands',
-    },
+    OnlineUrl: 'http://ng-nl.org/',
     sessions: [
       {
         id: 1,
