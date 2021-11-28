@@ -3,13 +3,13 @@
     <div>Date: {{event?.date}}</div>
     <div>Time: {{event?.time}}</div>
     <div>Price: ${{event?.price}}</div>
-    <div>
-    <span>Location : {{event.location?.address}}</span>
-    <span>&nbsp;</span>
-    <span>{{event.location?.city}}, {{event.location?.country}}</span>
-    <div>
+    <div *ngIf="event?.location">
+        <span>Location : {{event.location?.address}}</span>
+        <span>&nbsp;</span>
+        <span>{{event.location?.city}}, {{event.location?.country}}</span>
+    </div>
+    <div *ngIf="event?.OnlineUrl">
         <span>Online: {{event.OnlineUrl}}</span>
     </div>
-</div>
-<button class="btn btn-primary">Click me!</button>
+    <button class="btn btn-primary">Click me!</button>
 </div>
