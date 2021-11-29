@@ -1,3 +1,11 @@
 .thumbnail {
-  min-height: 210px;
+    min-height: 210px;
+}
+
+.green {
+    color: green;
+}
+
+.bold {
+    font-weight: bold;
 }
