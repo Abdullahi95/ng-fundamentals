@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
-import { events } from '../eventsdata';
+import { EventService } from './shared/event.service';
 
 @Component({
   selector: 'events-lists',
   templateUrl: './events-list.component.html',
 })
 export class EventListComponent {
-  eventData = events;
+  event: any;
+
+  constructor(private eventService: EventService) {}
+
+  ngOnInit() {
+    this.event = this.eventService.gotEvents();
+  }
 }
