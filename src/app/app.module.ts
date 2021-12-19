@@ -7,6 +7,7 @@ import { EventThumbnailComponent } from './events/event-thumbnail-component';
 import { NavBarComponent } from './navbar/navbar.component';
 import { EventService } from './events/shared/event.service';
 import { ToastrService } from './common/toastr.service';
+import { EventDetailsComponent } from './events/event-details/event-details-component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ToastrService } from './common/toastr.service';
     EventListComponent,
     EventThumbnailComponent,
     NavBarComponent,
+    EventDetailsComponent,
   ],
   imports: [BrowserModule],
   //// Now that it is registered as a provider Angular's injector is aware of this, and so whenever we request it in another component or service, Angular will know where to go to get this service.

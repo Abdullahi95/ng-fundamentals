@@ -15,7 +15,7 @@ export class EventListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.event = this.eventService.gotEvents();
+    this.event = this.eventService.getEvents();
   }
 
   handleThumbnailClick(name: string) {
