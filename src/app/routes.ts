@@ -5,6 +5,7 @@ import { EventDetailsComponent } from './events/event-details/event-details-comp
 import { EventListComponent } from './events/events-list.component';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
 
+// The order of your routes are important.
 export const appRoutes: Routes = [
   {
     path: 'events',
@@ -14,6 +15,8 @@ export const appRoutes: Routes = [
   {
     path: 'events/new',
     component: CreateEventComponent,
+    /// we provide the function, to use the function we just add the function name.
+    canDeactivate: ['canDeactivateCreateEvent'],
   },
   {
     path: 'events/:id',

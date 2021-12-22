@@ -24,8 +24,23 @@ import { EventRouteActivator } from './events/event-details/event-route-activato
   ],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   //// Now that it is registered as a provider Angular's injector is aware of this, and so whenever we request it in another component or service, Angular will know where to go to get this service.
-  providers: [EventService, ToastrService, EventRouteActivator],
+  providers: [
+    EventService,
+    ToastrService,
+    EventRouteActivator,
+    { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState },
+  ],
   //// bootsrap = its here we tell Angular which component is the main top-level app component.
   bootstrap: [EventsAppComponent],
 })
 export class AppModule {}
+
+// We could've defined this function within another file.
+export function checkDirtyState(component: CreateEventComponent) {
+  if (component.isDirty) {
+    return window.confirm(
+      'You have not saved this event, do you really want to cancel?'
+    );
+  }
+  return true;
+}
