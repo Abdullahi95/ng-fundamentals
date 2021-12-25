@@ -9,7 +9,6 @@ export class EventRouteActivator implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot) {
     // You can use the + operator before a string to coerce it into a floating point number.
     const eventExists = !!this.eventService.getEvent(+route.params['id']);
-    console.log(eventExists);
 
     if (!eventExists) {
       this.router.navigate(['/404']);

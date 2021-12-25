@@ -12,6 +12,7 @@ import { EventDetailsComponent } from './events/event-details/event-details-comp
 import { appRoutes } from './routes';
 import { CreateEventComponent } from './events/create-event/create-events.component';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
+import { EventListResolver } from './events/shared/event-list-resolver.service';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { EventRouteActivator } from './events/event-details/event-route-activato
     ToastrService,
     EventRouteActivator,
     { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState },
+    EventListResolver,
   ],
   //// bootsrap = its here we tell Angular which component is the main top-level app component.
   bootstrap: [EventsAppComponent],

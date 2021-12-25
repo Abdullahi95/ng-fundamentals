@@ -4,12 +4,14 @@ import { CreateEventComponent } from './events/create-event/create-events.compon
 import { EventDetailsComponent } from './events/event-details/event-details-component';
 import { EventListComponent } from './events/events-list.component';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
+import { EventListResolver } from './events/shared/event-list-resolver.service';
 
 // The order of your routes are important.
 export const appRoutes: Routes = [
   {
     path: 'events',
     component: EventListComponent,
+    resolve: { events: EventListResolver },
   },
 
   {
