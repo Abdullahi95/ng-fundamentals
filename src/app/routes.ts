@@ -35,4 +35,9 @@ export const appRoutes: Routes = [
     redirectTo: '/events',
     pathMatch: 'full',
   },
+  {
+    // anything inside the user feature module ios going to have a route prefixed to it which is "user".
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
+  },
 ];
